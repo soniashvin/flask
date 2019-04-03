@@ -45,17 +45,8 @@ def submitted_form():
     email = request.form['email']
     site = request.form['site_url']
     comments = request.form['comments']
-	sas=submit_pyspark_job(dataproc, project, region,cluster_name, bucket_name, filename)
-	
-    # [END submitted]
-    # [START render_template]
-    return render_template(
-        'submitted_form.html',
-        name=name,
-        email=email,
-        site=site,
-        comments=comments
-		ssa=sas)
+    sas=submit_pyspark_job(dataproc, project, region,cluster_name, bucket_name, filename)
+    return render_template('submitted_form.html', name=name,  email=email,  site=site,   comments=comments ,ssa=sas)
     # [END render_template]
 
 
