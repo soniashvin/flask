@@ -1,26 +1,46 @@
 <html>
   <head>
-    <title>Submit a form</title>
+    <title>Collaborative Filtering </title>
    <link rel="stylesheet" type="text/css" href="/static/style.css">
-  
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
   </head>
   <body>
-    <div id="container">
+    <div id="container" class="container">
       <div class="pagetitle">
-        <h1>Submit a form</h1>
+        <h1> <center>Recommendation Engine </center></h1>
       </div>
-      <div id="main">
-        <form method="post" action="{{ url_for('submitted_form') }}">
-          <label for="name">Name:</label>
-          <input type="text" name="name"><br />
-          <label for="email">Email address:</label>
-          <input type="email" name="email"><br />
-          <label for="site_url">Website URL:</label>
-          <input type="url" name="site_url"><br />
-          <label for="comments">Comments:</label>
-          <textarea name="comments"></textarea><br />
-          <input type="submit">
-        </form>
+      <div align="center" id="main" class="form-group">
+
+<form method="post" action="{{ url_for('submitted_form') }}">
+  <div class="form-group">
+    <label for="name" style="float: left;">Name</label>
+    <input type="text" class="form-control" name="name"  aria-describedby="emailHelp" placeholder="Enter Name/ID">
+  </div>
+  <div class="form-group">
+    <label for="Place 1" style="float: left;">Place 1</label>
+    <input type=text" class="form-control" name="p1" placeholder="Rating">
+  </div>
+ <div class="form-group" >
+    <label for="Place 2 " style="float: left;">Place 2</label>
+    <input type=text" class="form-control" name="p2" placeholder="Rating">
+  </div>
+   <div class="form-group">
+    <label for="Place 3" style="float: left;">Place 3</label>
+    <input type=text" class="form-control"  name="p3" placeholder="Rating">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+
       </div>
     </div>
   </body>
